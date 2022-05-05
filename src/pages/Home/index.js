@@ -5,6 +5,7 @@ import './home.css';
 
 function Home(){
     const [filmes, setFilmes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{         //assim que a page for atualizada, chama api
         async function loadFilmes(){
@@ -16,23 +17,36 @@ function Home(){
                 }
             })
             setFilmes(response.data.results.slice(0,10))
+            setLoading(false);
         }
         loadFilmes();
     },[])
+
+    if(loading){
+        return(
+            <div className="loading">
+                <h2>Carregando filmes...</h2>
+            </div>
+        )
+    }
+
     return(
         <div className="container">
             <div className="catalogo">
                 {filmes.map((f)=>{
                     return(
                         <article key={f.id}>
-                            <img src={`https://image.tmdb.org/t/p/original/${f.poster_path}`} alt={f.title} className="capa"/>
+                            <div className="fotoBotao">
+                                <img src={`https://image.tmdb.org/t/p/original/${f.poster_path}`} alt={f.title} className="capa"/>
+                                <Link to={`/filme/${f.id}`} className="botao">Acessar</Link>
+                            </div>
+                            
                             <div className="dadosFilme">
                                 <div className="campoTitulo">
                                     <strong className="titulo">{f.title}</strong>
                                     <strong className="nota">{f.vote_average}</strong>
                                 </div>
                                 <p className="sinopse">{f.overview}</p>
-                                <Link to={`/filme/${f.id}`} className="botao">Acessar</Link>
                             </div>
                         </article>
                 )
