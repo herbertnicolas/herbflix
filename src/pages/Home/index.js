@@ -6,7 +6,9 @@ import './home.css';
 function Home(){
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [background, setBackground] = useState();
 
+    var divImage;
     useEffect(()=>{         //assim que a page for atualizada, chama api
         async function loadFilmes(){
             const response = await api.get("movie/now_playing", { //await esperando a requisiçao acontecer
@@ -18,10 +20,12 @@ function Home(){
             })
             setFilmes(response.data.results.slice(0,10))
             setLoading(false);
+
         }
         loadFilmes();
     },[])
-
+    
+   
     if(loading){
         return(
             <div className="loading">
@@ -31,24 +35,28 @@ function Home(){
     }
 
     return(
+        
         <div className="container">
             <div className="catalogo">
                 {filmes.map((f)=>{
                     return(
-                        <article key={f.id}>
-                            <div className="fotoBotao">
-                                <img src={`https://image.tmdb.org/t/p/original/${f.poster_path}`} alt={f.title} className="capa"/>
-                                <Link to={`/filme/${f.id}`} className="botao">Acessar</Link>
-                            </div>
-                            
-                            <div className="dadosFilme">
-                                <div className="campoTitulo">
-                                    <strong className="titulo">{f.title}</strong>
-                                    <strong className="nota">{f.vote_average}</strong>
+                        <div className="articleCont">
+                            <img src={`https://image.tmdb.org/t/p/original/${f.backdrop_path}`} alt={f.title} className="fundo"/>
+                            <article key={f.id}>
+                                <div className="fotoBotao">
+                                    <img src={`https://image.tmdb.org/t/p/original/${f.poster_path}`} alt={f.title} className="capa"/>
+                                    <Link to={`/filme/${f.id}`} className="botao">Acessar</Link>
                                 </div>
-                                <p className="sinopse">{f.overview}</p>
-                            </div>
-                        </article>
+                                
+                                <div className="dadosFilme">
+                                    <div className="campoTitulo">
+                                        <strong className="titulo">{f.title}</strong>
+                                        <strong className="nota">{f.vote_average}</strong>
+                                    </div>
+                                    <p className="sinopse">{f.overview}</p>
+                                </div>
+                            </article>
+                        </div>
                 )
                 })}
             </div>
