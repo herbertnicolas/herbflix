@@ -30,8 +30,15 @@
     font-size: 24px;
 }
 
-.fotoBotao{
+.articleCont .capa{
     opacity: 100%;
+}
+
+.articleCont .fundo{
+    opacity: 12%;
+}
+
+.fotoBotao{
     margin-left: 20px;
 }
 
@@ -40,7 +47,6 @@
     max-width: 270px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    opacity: 100%;
 
 }
 
