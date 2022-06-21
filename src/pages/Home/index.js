@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
 import './home.css';
+import './like.png'
 
 function Home(){
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [background, setBackground] = useState();
 
-    var divImage;
     useEffect(()=>{         //assim que a page for atualizada, chama api
         async function loadFilmes(){
             const response = await api.get("movie/now_playing", { //await esperando a requisiçao acontecer
@@ -33,7 +32,7 @@ function Home(){
             </div>
         )
     }
-
+    
     return(
         
         <div className="container">
@@ -50,7 +49,7 @@ function Home(){
                                 
                                 <div className="dadosFilme">
                                     <div className="campoTitulo">
-                                        <strong className="titulo">{f.title}</strong>
+                                        <strong className="titulo" href={`/filme/${f.id}`}>{f.title}</strong>
                                         <strong className="nota">{f.vote_average}</strong>
                                     </div>
                                     <p className="sinopse">{f.overview}</p>

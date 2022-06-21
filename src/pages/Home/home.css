@@ -1,3 +1,4 @@
+
 .fundo{
     width: 800px;
     height: 470px;
@@ -72,4 +73,36 @@
     color: white;
     opacity: 100%;
 
+}
+
+.dadosFilme .campoTitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dadosFilme .sinopse {
+    font-size: min(20px, 2.3vw);
+    overflow: hidden;
+}
+.dadosFilme .campoTitulo .titulo{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: min(2.2rem, 4.6vw);
+    color: rgb(83, 231, 69);
+    overflow: hidden;
+    font-weight: 600;
+}
+.nota{
+    display: flex;
+    background-color: rgba(83, 231, 69, 0.397);
+    align-items: center;
+    justify-content: center;
+    margin-right: -8px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 8px;
+    max-height: 49.35px;
+
+}
+.nota:hover{
+    cursor: pointer;
 }
