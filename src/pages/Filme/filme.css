@@ -1,0 +1,27 @@
+.detalhes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+.detalhes .titulo{
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 20px
+}
+
+.detalhes img{
+    max-width: 80%;
+}
+
+.detalhes .texto{
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    padding-top: 20px;
+}
