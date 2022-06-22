@@ -1,3 +1,7 @@
+:root{
+    --font-big: min(2.2rem, 4.6vw);
+    --font-small: min(20px, 2.3vw);
+}
 .detalhes{
     display: flex;
     flex-direction: column;
@@ -19,9 +23,11 @@
 }
 
 .detalhes .texto{
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     justify-content: center;
     align-items: center;
     max-width: 90%;
     padding-top: 20px;
+    font-weight: 100;
 }

@@ -56,8 +56,7 @@ function Home(){
                                 </div>
                             </article>
                         </div>
-                )
-                })}
+                )})}
             </div>
         </div>
     )

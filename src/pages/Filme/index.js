@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 import './filme.css';
+import './logo-jsj.png' 
 
 function Filme(){
     const { id } = useParams();
@@ -41,6 +42,7 @@ function Filme(){
             <h3 className='texto'>{filme.overview}</h3>
             <h3>Nota</h3>
             <h3 className='nota'>{filme.vote_average}</h3>
+            <img src='./logo-jsjs.png' alt='imagemaleatoria'/>
         </div>
     )
 }
