@@ -1,3 +1,7 @@
+:root{
+    --font-big: min(2.2rem, 4.6vw);
+    --font-small: min(20px, 2.3vw);
+}
 
 .fundo{
     width: 800px;
@@ -81,12 +85,12 @@
     align-items: center;
 }
 .dadosFilme .sinopse {
-    font-size: min(20px, 2.3vw);
+    font-size: var(--font-small);
     overflow: hidden;
 }
 .dadosFilme .campoTitulo .titulo{
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: min(2.2rem, 4.6vw);
+    font-size: var(--font-big);
     color: rgb(83, 231, 69);
     overflow: hidden;
     font-weight: 600;

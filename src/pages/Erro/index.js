@@ -4,8 +4,8 @@ import './erro.css'
 function Erro(){
     return(
         <div className="notFound">
-            <h1>404</h1>
-            <h2>Ops! Parece que essa página não existe...</h2>
+            <h1>Bem vindo!</h1>
+            <h2>Clique no botão abaixo e descubra o melhor do cinema!</h2>
             <Link to="/">Ver filmes em cartaz</Link>
         </div>
     )
