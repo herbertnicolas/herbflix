@@ -55,6 +55,7 @@ function Home(){
                                     <p className="sinopse">{f.overview}</p>
                                 </div>
                             </article>
+                            
                         </div>
                 )})}
             </div>

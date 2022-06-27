@@ -35,14 +35,23 @@ function Filme(){
         )
     }
 
+    let notaa = `${filme.vote_average}`;
+    let rounded = parseFloat(notaa,10).toFixed(1);
+
     return(
         <div className='detalhes'>
             <h1 className='titulo'>{filme.title}</h1>
             <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
             <h3 className='texto'>{filme.overview}</h3>
-            <h3>Nota</h3>
-            <h3 className='nota'>{filme.vote_average}</h3>
-            <img src='./logo-jsjs.png' alt='imagemaleatoria'/>
+            <h3 className='nota'>Avaliação dos usuarios: <span className="note">{rounded}</span></h3>
+            <div className='areaBtns'>
+                <button>Salvar</button>    
+                <button>
+                    <a target="blank" rel ="external" href={`https://youtube.com/results?search_query=${filme.title}+_trailer`}>
+                        Trailer
+                    </a>
+                </button>    
+            </div>             
         </div>
     )
 }
