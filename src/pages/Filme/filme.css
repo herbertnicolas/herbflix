@@ -2,6 +2,9 @@
     --font-big: min(2.2rem, 4.6vw);
     --font-small: min(20px, 2.3vw);
 }
+img{
+    border-radius: 6px;
+}
 .detalhes{
     display: flex;
     flex-direction: column;
@@ -30,4 +33,45 @@
     max-width: 90%;
     padding-top: 20px;
     font-weight: 100;
+}
+
+.areaBtns button{
+    font-size: 20px;
+    color: rgb(74, 154, 186);
+    cursor: pointer;
+    padding: 3px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 3px;
+    outline-style: none;
+}
+.areaBtns button a{
+    text-decoration: none;
+    color: rgb(74, 154, 186);
+
+}
+.areaBtns button:hover, button a:hover{
+    background-color: rgb(74, 154, 186);
+    border-radius: 4px;
+    transition: 0.4s all ease-in-out;
+    color: white;
+}
+
+.nota{
+    background-color: black;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.nota .note{
+    display: flex;
+    background-color: rgba(83, 231, 69, 0.397);
+    align-items: center;
+    justify-content: center;
+    margin-right: -8px;
+    border-radius: 12px;
+    padding: 8px;
+    margin:2px;
+    max-height: 49.35px;  
 }
