@@ -10,6 +10,20 @@ function Filme(){
     const [ loading, setLoading ] = useState(true);
     const [ filme, setFilmes ] = useState({});
 
+    function salvaFilme(){
+        const arrFilmes = localStorage.getItem("@filmeLista");    //o armazenamento local
+        let filmesSalvos = JSON.parse(arrFilmes) || []; //se ja existir uma lista, adicionar nela, caso contrário criar uma
+        const hasFilme = filmesSalvos.some( (filmesSalvos) => filmesSalvos.id === filme.id); //comparando pra saer se já existe o filme em questao
+        
+        if(hasFilme){
+            alert("Este filme já se encontra na sua lista!");
+            return;
+        }
+        filmesSalvos.push(filme);
+        localStorage.setItem("@filmeLista", JSON.stringify(filmesSalvos)) //inserindo no armazenamento local
+        alert("Filme salvo com sucesso!");
+    }
+
     useEffect(() => {
         async function loadFilme(){
             await api.get(`/movie/${id}`, {
@@ -45,7 +59,7 @@ function Filme(){
             <h3 className='texto'>{filme.overview}</h3>
             <h3 className='nota'>Avaliação dos usuarios: <span className="note">{rounded}</span></h3>
             <div className='areaBtns'>
-                <button>Salvar</button>    
+                <button onClick={salvaFilme}>Salvar</button>    
                 <button>
                     <a target="blank" rel ="external" href={`https://youtube.com/results?search_query=${filme.title}+_trailer`}>
                         Trailer
