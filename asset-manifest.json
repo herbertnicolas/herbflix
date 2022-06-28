@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HerbFlix/static/css/main.73b9b018.css",
-    "main.js": "/HerbFlix/static/js/main.0ee3d933.js",
+    "main.css": "/HerbFlix/static/css/main.3a5182dd.css",
+    "main.js": "/HerbFlix/static/js/main.9a557c42.js",
     "static/media/BebasNeue.otf": "/HerbFlix/static/media/BebasNeue.2f99e8e59eadc04454dc.otf",
     "static/media/Graphique W01 Regular.ttf": "/HerbFlix/static/media/Graphique W01 Regular.a09f8ba390e4d48b466c.ttf",
     "index.html": "/HerbFlix/index.html",
-    "main.73b9b018.css.map": "/HerbFlix/static/css/main.73b9b018.css.map",
-    "main.0ee3d933.js.map": "/HerbFlix/static/js/main.0ee3d933.js.map"
+    "main.3a5182dd.css.map": "/HerbFlix/static/css/main.3a5182dd.css.map",
+    "main.9a557c42.js.map": "/HerbFlix/static/js/main.9a557c42.js.map"
   },
   "entrypoints": [
-    "static/css/main.73b9b018.css",
-    "static/js/main.0ee3d933.js"
+    "static/css/main.3a5182dd.css",
+    "static/js/main.9a557c42.js"
   ]
 }
