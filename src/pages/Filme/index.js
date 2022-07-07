@@ -49,6 +49,7 @@ function Filme(){
         )
     }
 
+    //pra arredondamento da nota
     let notaa = `${filme.vote_average}`;
     let rounded = parseFloat(notaa,10).toFixed(1);
 
@@ -61,7 +62,7 @@ function Filme(){
             <div className='areaBtns'>
                 <button onClick={salvaFilme}>Salvar</button>    
                 <button>
-                    <a target="blank" rel ="external" href={`https://youtube.com/results?search_query=${filme.title}+_trailer`}>
+                    <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title}+_trailer`}>
                         Trailer
                     </a>
                 </button>    

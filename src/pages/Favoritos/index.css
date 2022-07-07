@@ -1,0 +1,97 @@
+:root{
+    --font-l: min(1.1rem, 2.3vw);
+    --font-s: min(15px, 1.40vw);
+    --font-b: min(1.0rem, 2.2vw);
+}
+
+.info {
+  height: 70%;
+}
+.meus-filmes li{
+    display: flex;
+    margin: 30px;
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.meus-filmes img{
+    max-width: 40%;
+    max-height: 20%;
+}
+
+.meus-filmes h3{
+    color: rgb(55, 175, 255);
+    font-size: var(--font-l);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.meus-filmes h4{
+    font-size: var(--font-s);
+    font-weight: 100;
+    padding-left: 10px;
+
+}
+
+.botoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 150px;
+  height: 50px;
+  padding-right: 10px;
+  margin-right: 0;
+}
+
+/* .btn {
+    
+}
+.btn:hover {
+    background-color: rgb(255, 65, 65);
+} */
+.meus-filmes button {
+    align-items: center;
+    background-image: linear-gradient(135deg, #ff0511 40%, #fc894d);
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 0;
+    color: #fff;
+    font-size: var(--font-b);
+    border-radius: 4px;
+    border: 3px;
+    padding: 4px;
+    display: flex;
+    margin-left: 75%;
+    background-color: rgba(255, 65, 65, 0.274);
+}
+.meus-filmes button:active {
+  outline: 0;
+}
+.meus-filmes button:hover {
+  outline: 0;
+}
+.meus-filmes button span {
+  transition: all 200ms;
+}
+.meus-filmes button:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+
+@media screen and (max-width: 991px) {
+  .meus-filmes button {
+    font-size: var(--font-b);
+    height: 2vh;
+  }
+
+  .meus-filmes button span {
+    line-height: 50px;
+  }
+
+}
