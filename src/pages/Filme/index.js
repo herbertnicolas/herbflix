@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 import './filme.css';
 import './logo-jsj.png' 
+import { toast } from 'react-toastify';
 
 function Filme(){
     const { id } = useParams();
@@ -21,7 +22,9 @@ function Filme(){
         }
         filmesSalvos.push(filme);
         localStorage.setItem("@filmeLista", JSON.stringify(filmesSalvos)) //inserindo no armazenamento local
-        alert("Filme salvo com sucesso!");
+        toast.success("Filme salvo com sucesso!", {
+            position: toast.POSITION.BOTTOM_RIGHT
+        });
     }
 
     useEffect(() => {
