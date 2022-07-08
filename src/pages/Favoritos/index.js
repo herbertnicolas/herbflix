@@ -23,7 +23,7 @@ function Favoritos(){
     
     return(
         <div className="meus-filmes">
-            {filme.length === 0 && <span>Sua lista de filmes salvos está vazia!</span>}
+            {filme.length === 0 && <span id="lista-vazia">Sua lista de filmes salvos está vazia!</span>}
             
             <ul>
                 {filme.map((item) => {
