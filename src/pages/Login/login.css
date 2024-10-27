@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container .bg{
+    background-image: url('/src/assets/img/cortina-bg.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 93vh;
+    overflow: hidden;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: rgba(255, 255, 255,0.85); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+.login .title {
+    font-family: 'Graphique', sans-serif;
+    cursor:pointer;
+    margin-top: -3px;
+    margin-left: 10px;
+    font-size: 60px;
+    color: rgb(31, 139, 213);
+}
