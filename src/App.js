@@ -1,7 +1,4 @@
 import RoutesApp from "./routes";
-import Home from "./pages/Home";
-import Filme from "./pages/Filme";
-import Header from "./components/Header";
 
 function App() {
   return (
